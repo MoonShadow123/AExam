@@ -8,7 +8,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,9 +38,99 @@
             <GridView
                 android:id="@+id/gv_fragment_home"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="220dp"
                 android:layout_marginTop="30dp"
-                android:numColumns="5" />
+                android:numColumns="5"
+                android:scrollbars="none" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="热门主题"
+                android:textColor="@color/colorPurple"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/radio_img" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/radio_img" />
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_home"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_home1"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:checked="true"
+                    android:background="@drawable/line"
+                    android:gravity="center"
+                    android:text="推荐"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_home2"
+                    android:background="@drawable/line"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/line"
+                    android:gravity="center"
+                    android:text="最新"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_home3"
+                    android:background="@drawable/line"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/line"
+                    android:gravity="center"
+                    android:text="看点"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_home4"
+                    android:background="@drawable/line"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/line"
+                    android:gravity="center"
+                    android:text="更多"
+                    android:textSize="16sp" />
+
+            </RadioGroup>
+
+            <ListView
+                android:scrollbars="none"
+                android:id="@+id/lv_fragment_home"
+                android:layout_width="match_parent"
+                android:layout_height="700dp"/>
+
         </LinearLayout>
 
     </ScrollView>
