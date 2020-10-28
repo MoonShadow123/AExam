@@ -29,7 +29,8 @@
         android:layout_marginRight="20dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:gravity="right"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="IP地址："
             android:textSize="16sp" />
@@ -50,7 +51,8 @@
         android:layout_marginLeft="20dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:gravity="right"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="端口："
             android:textSize="16sp" />
@@ -66,14 +68,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="50dp">
 
         <Button
             android:id="@+id/btn_guide_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
+            android:layout_marginLeft="70dp"
             android:text="取消" />
 
         <Button
@@ -81,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="80dp"
+            android:layout_marginRight="70dp"
             android:text="保存" />
     </RelativeLayout>
 
