@@ -7,10 +7,11 @@ import android.widget.BaseAdapter;
 
 import com.example.aexam.R;
 
-public class DiListAdapter extends BaseAdapter {
+public class ZiListAdapter  extends BaseAdapter {
+
     @Override
     public int getCount() {
-        return 6;
+        return 10;
     }
 
     @Override
@@ -26,7 +27,7 @@ public class DiListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_di, parent, false);
+            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_zi, parent, false);
         }
         return convertView;
     }
