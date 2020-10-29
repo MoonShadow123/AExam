@@ -20,6 +20,7 @@ import com.example.aexam.R;
 import com.example.aexam.adapter.HomeGridAdapter;
 import com.example.aexam.adapter.HomeListAdapter;
 import com.example.aexam.adapter.LoopViewAdapter;
+import com.example.aexam.util.ListUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,7 @@ public class HomeFragment extends Fragment {
     private int[] mImg;
     private List<ImageView> mImgList;
     private int previousSelectedPosition;
-    private boolean isRunning ;
+    private boolean isRunning;
 
     @Nullable
     @Override
@@ -57,7 +58,7 @@ public class HomeFragment extends Fragment {
         ImageView imageView;
         View dotView;
         LinearLayout.LayoutParams layoutParams;
-        for(int i=0;i<mImg.length;i++){
+        for (int i = 0; i < mImg.length; i++) {
             //初始化要显示的图片对象
             imageView = new ImageView(getContext());
             imageView.setBackgroundResource(mImg[i]);
@@ -65,13 +66,13 @@ public class HomeFragment extends Fragment {
             //加引导点
             dotView = new View(getContext());
             dotView.setBackgroundResource(R.drawable.dot);
-            layoutParams = new LinearLayout.LayoutParams(15,15);
-            if(i!=0){
-                layoutParams.leftMargin=10;
+            layoutParams = new LinearLayout.LayoutParams(15, 15);
+            if (i != 0) {
+                layoutParams.leftMargin = 10;
             }
             //设置默认所有都不可用
             dotView.setEnabled(false);
-            ll_dots_container.addView(dotView,layoutParams);
+            ll_dots_container.addView(dotView, layoutParams);
         }
 
         ll_dots_container.getChildAt(0).setEnabled(true);
@@ -79,7 +80,7 @@ public class HomeFragment extends Fragment {
         //设置适配器
         viewPager.setAdapter(new LoopViewAdapter(mImgList));
         // 把ViewPager设置为默认选中Integer.MAX_VALUE / t2，从十几亿次开始轮播图片，达到无限循环目的;
-        int m = (Integer.MAX_VALUE / 2) %mImgList.size();
+        int m = (Integer.MAX_VALUE / 2) % mImgList.size();
         int currentPosition = Integer.MAX_VALUE / 2 - m;
         viewPager.setCurrentItem(currentPosition);
 
@@ -106,10 +107,10 @@ public class HomeFragment extends Fragment {
         isRunning = true;
 
         // 开启轮询
-        new Thread(){
-            public void run(){
-                while(isRunning){
-                    try{
+        new Thread() {
+            public void run() {
+                while (isRunning) {
+                    try {
                         Thread.sleep(3000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -118,7 +119,7 @@ public class HomeFragment extends Fragment {
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            viewPager.setCurrentItem(viewPager.getCurrentItem()+1);
+                            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
                         }
                     });
                 }
@@ -143,6 +144,8 @@ public class HomeFragment extends Fragment {
 
         HomeListAdapter adapter1 = new HomeListAdapter();
         listView.setAdapter(adapter1);
+        listView.setFocusable(false);
+        ListUtils.setListViewHeightBasedOnChildren(listView);
     }
 
     @Override

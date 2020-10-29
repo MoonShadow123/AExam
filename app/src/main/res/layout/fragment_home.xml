@@ -105,7 +105,7 @@
 
                 <RadioButton
                     android:id="@+id/rb_home1"
-                    android:layout_width="70dp"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/line"
                     android:button="@null"
@@ -116,7 +116,7 @@
 
                 <RadioButton
                     android:id="@+id/rb_home2"
-                    android:layout_width="70dp"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/line"
                     android:button="@null"
@@ -127,7 +127,7 @@
 
                 <RadioButton
                     android:id="@+id/rb_home3"
-                    android:layout_width="70dp"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/line"
                     android:button="@null"
@@ -138,7 +138,7 @@
 
                 <RadioButton
                     android:id="@+id/rb_home4"
-                    android:layout_width="70dp"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/line"
                     android:button="@null"
@@ -152,7 +152,7 @@
             <ListView
                 android:id="@+id/lv_fragment_home"
                 android:layout_width="match_parent"
-                android:layout_height="700dp"
+                android:layout_height="match_parent"
                 android:scrollbars="none" />
 
         </LinearLayout>

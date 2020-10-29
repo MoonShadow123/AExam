@@ -12,13 +12,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:text="个人中心"
+            android:layout_centerInParent="true"
+            android:text="个人信息"
             android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
+        <ImageView
+            android:id="@+id/iv_person_msg"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/back" />
+
     </RelativeLayout>
+
 
     <ImageView
         android:layout_width="150dp"
@@ -26,19 +34,12 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:src="@drawable/header" />
-    <TextView
-        android:layout_gravity="center"
-        android:textSize="16sp"
-        android:text="账户：4681648964648"
-        android:layout_marginTop="15dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
 
     <ListView
-        android:id="@+id/lv_fragment_person"
+        android:id="@+id/lv_person_msg"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
 
 </LinearLayout>

@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.aexam.R;
 import com.example.aexam.adapter.DiListAdapter;
+import com.example.aexam.util.ListUtils;
 
 public class DiFragment extends Fragment {
 
@@ -29,5 +30,7 @@ public class DiFragment extends Fragment {
         listView = view.findViewById(R.id.lv_fragment_di);
         DiListAdapter adapter = new DiListAdapter();
         listView.setAdapter(adapter);
+        listView.setFocusable(false);
+        ListUtils.setListViewHeightBasedOnChildren(listView);
     }
 }
