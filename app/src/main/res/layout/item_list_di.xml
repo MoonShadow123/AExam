@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:background="@drawable/line_border"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="160dp" >
+
+    <TextView
+        android:textSize="15sp"
+        android:textColor="@color/colorWhite"
+        android:text="1号线"
+        android:gravity="center"
+        android:background="@color/colorPurple"
+        android:layout_width="70dp"
+        android:layout_height="35dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_item_di_station"
+            android:textSize="25sp"
+            android:textColor="@color/colorBlack"
+            android:layout_centerInParent="true"
+            android:text="下一站：黄边"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tv_item_di_station"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_centerInParent="true"
+            android:text="到站时间：16：42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+</LinearLayout>

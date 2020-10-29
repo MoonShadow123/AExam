@@ -2,13 +2,94 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="地铁"
-        android:textSize="40sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPurple">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="城市地铁"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+   <ScrollView
+       android:scrollbars="none"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="160dp"
+               android:layout_margin="30dp"
+               android:background="@drawable/et_border"
+               android:orientation="vertical">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_marginTop="30dp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:layout_marginRight="30dp"
+                       android:gravity="center"
+                       android:text="北京建国门站"
+                       android:textColor="@color/colorBlack"
+                       android:textSize="15sp" />
+
+                   <ImageView
+                       android:layout_width="30dp"
+                       android:layout_height="30dp"
+                       android:src="@drawable/change" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:layout_marginLeft="30dp"
+                       android:gravity="center"
+                       android:text="市中心"
+                       android:textColor="@color/colorBlack"
+                       android:textSize="15sp" />
+               </LinearLayout>
+
+               <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_marginTop="35dp"
+                   android:background="@drawable/sel_btn"
+                   android:text="搜索"
+                   android:textColor="@color/colorWhite"
+                   android:textSize="16sp" />
+
+           </LinearLayout>
+
+           <ListView
+               android:scrollbars="none"
+               android:id="@+id/lv_fragment_di"
+               android:layout_width="match_parent"
+               android:layout_height="1000dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="30dp" />
+       </LinearLayout>
+
+   </ScrollView>
 
 </LinearLayout>
