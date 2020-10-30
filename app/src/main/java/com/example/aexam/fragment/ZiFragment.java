@@ -1,9 +1,11 @@
 package com.example.aexam.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -14,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.aexam.R;
+import com.example.aexam.activity.NewsDetailsActivity;
 import com.example.aexam.adapter.LoopViewAdapter;
 import com.example.aexam.adapter.ZiListAdapter;
 import com.example.aexam.util.ListUtils;
@@ -55,6 +58,13 @@ public class ZiFragment extends Fragment {
         listView.setFocusable(false);
         // 动态修改listView子项高度
         ListUtils.setListViewHeightBasedOnChildren(listView);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getContext(), NewsDetailsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

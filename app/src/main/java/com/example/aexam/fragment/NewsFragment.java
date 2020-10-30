@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,10 +20,12 @@ import com.example.aexam.R;
 import com.example.aexam.activity.NewsDetailsActivity;
 import com.example.aexam.adapter.LoopViewAdapter;
 import com.example.aexam.adapter.NewsListAdapter;
+import com.example.aexam.bean.News;
 import com.example.aexam.util.ListUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class NewsFragment extends Fragment {
 
@@ -33,11 +36,15 @@ public class NewsFragment extends Fragment {
     private int previousSelectedPosition;
     private boolean isRunning = true;
     private ListView listView;
+    private RadioGroup radioGroup;
+    private List<News> list;
+    private int[] imgs = {R.drawable.dang1, R.drawable.dang2, R.drawable.dang3, R.drawable.dang4, R.drawable.dang5};
+    private NewsListAdapter adapter;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_news,container,false);
+        return inflater.inflate(R.layout.fragment_news, container, false);
     }
 
     @Override
@@ -46,12 +53,45 @@ public class NewsFragment extends Fragment {
         viewPager = view.findViewById(R.id.vp_fragment_news);
         ll_dots_container = view.findViewById(R.id.ll_dots_loop_news);
         listView = view.findViewById(R.id.lv_fragment_news);
+        radioGroup = view.findViewById(R.id.rg_news);
         initLoopView();  //实现轮播图
         initList();
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.rb_news_tuijian:
+                        getRandomData();
+                        break;
+                    case R.id.rb_news_zuixing:
+                        getRandomData();
+                        break;
+                    case R.id.rb_news_kandian:
+                        getRandomData();
+                        break;
+                    case R.id.rb_news_gengdou:
+                        getRandomData();
+                        break;
+                }
+            }
+        });
     }
 
+    private void getRandomData() {
+        for (int i = 0; i < list.size(); i++) {
+            Random random = new Random();
+            list.get(i).setImgId(imgs[random.nextInt(list.size())]);
+        }
+        adapter.notifyDataSetChanged();
+
+    }
+
+
     private void initList() {
-        NewsListAdapter adapter = new NewsListAdapter();
+        list = new ArrayList<>();
+        list = News.getList();
+        adapter = new NewsListAdapter(list);
         listView.setAdapter(adapter);
         // 让ListView失去焦点
         listView.setFocusable(false);
@@ -118,7 +158,6 @@ public class NewsFragment extends Fragment {
 
             }
         });
-
 
 
         // 开启轮询

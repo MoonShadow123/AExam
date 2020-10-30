@@ -63,14 +63,14 @@
 
             <RadioGroup
                 android:layout_marginLeft="20dp"
-                android:id="@+id/rg_home"
+                android:id="@+id/rg_news"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rb_home1"
+                    android:id="@+id/rb_news_tuijian"
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/line"
@@ -81,7 +81,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
-                    android:id="@+id/rb_home2"
+                    android:id="@+id/rb_news_zuixing"
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/line"
@@ -92,7 +92,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
-                    android:id="@+id/rb_home3"
+                    android:id="@+id/rb_news_kandian"
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/line"
@@ -103,7 +103,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
-                    android:id="@+id/rb_home4"
+                    android:id="@+id/rb_news_gengdou"
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/line"
