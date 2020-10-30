@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPurple">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="订单列表"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_order_back"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/back" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RadioGroup
+            android:id="@+id/rg_home"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_weight="1"
+                android:id="@+id/rb_home1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="全部订单"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:layout_weight="1"
+                android:id="@+id/rb_home2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:button="@null"
+                android:drawableBottom="@drawable/line"
+                android:gravity="center"
+                android:text="待付款"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:layout_weight="1"
+                android:id="@+id/rb_home3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:button="@null"
+                android:drawableBottom="@drawable/line"
+                android:gravity="center"
+                android:text="待参加"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:layout_weight="1"
+                android:id="@+id/rb_home4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:button="@null"
+                android:drawableBottom="@drawable/line"
+                android:gravity="center"
+                android:text="待评价"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <ListView
+            android:id="@+id/lv_order"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

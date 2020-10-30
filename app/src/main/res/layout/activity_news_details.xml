@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.NewsDetailsActivity">
+
+   <ScrollView
+       android:layout_weight="1"
+       android:scrollbars="none"
+       android:layout_width="match_parent"
+       android:layout_height="0dp">
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <ImageView
+               android:id="@+id/iv_news_details_back"
+               android:layout_width="25dp"
+               android:layout_height="25dp"
+               android:layout_marginStart="15dp"
+               android:layout_marginTop="10dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:srcCompat="@drawable/back_black" />
+
+           <ImageView
+               android:id="@+id/imageView2"
+               android:layout_width="30dp"
+               android:layout_height="25dp"
+               android:layout_marginEnd="15dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="@+id/iv_news_details_back"
+               app:srcCompat="@drawable/more" />
+
+           <ImageView
+               android:id="@+id/imageView3"
+               android:layout_width="25dp"
+               android:layout_height="25dp"
+               android:layout_marginEnd="30dp"
+               app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+               app:layout_constraintEnd_toStartOf="@+id/imageView2"
+               app:srcCompat="@drawable/search" />
+
+           <ImageView
+               android:id="@+id/imageView4"
+               android:layout_width="0dp"
+               android:layout_height="0dp"
+               android:layout_marginStart="15dp"
+               android:layout_marginEnd="15dp"
+               android:scaleType="centerCrop"
+               app:layout_constraintBottom_toTopOf="@+id/guideline2"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.394"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="@+id/guideline"
+               app:srcCompat="@drawable/dang4" />
+
+           <androidx.constraintlayout.widget.Guideline
+               android:id="@+id/guideline"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               app:layout_constraintGuide_begin="43dp" />
+
+           <androidx.constraintlayout.widget.Guideline
+               android:id="@+id/guideline2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               app:layout_constraintGuide_begin="262dp" />
+
+           <androidx.constraintlayout.widget.Guideline
+               android:id="@+id/guideline3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               app:layout_constraintGuide_begin="511dp" />
+
+           <TextView
+               android:id="@+id/textView"
+               android:layout_width="0dp"
+               android:layout_height="0dp"
+               android:layout_marginStart="15dp"
+               android:layout_marginTop="15dp"
+               android:layout_marginEnd="15dp"
+               android:layout_marginBottom="15dp"
+               android:ellipsize="end"
+               android:lineSpacingMultiplier="1.3"
+               android:maxLines="8"
+               android:text="@string/news_content"
+               android:textSize="15sp"
+               app:layout_constraintBottom_toTopOf="@+id/guideline3"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+           <androidx.constraintlayout.widget.Guideline
+               android:id="@+id/guideline5"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               app:layout_constraintGuide_begin="731dp" />
+
+
+           <ListView
+               android:id="@+id/lv_news_details"
+               android:layout_width="0dp"
+               android:layout_height="0dp"
+               android:layout_marginStart="15dp"
+               android:layout_marginEnd="15dp"
+               android:scrollbars="none"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.0"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+   </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/share" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintEnd_toStartOf="@+id/imageView5"
+            app:srcCompat="@drawable/praise" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintEnd_toStartOf="@+id/imageView6"
+            app:srcCompat="@drawable/star" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintEnd_toStartOf="@+id/imageView7"
+            app:srcCompat="@drawable/message" />
+
+        <EditText
+            android:focusable="false"
+            android:id="@+id/editTextPhone"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/et_border"
+            android:ems="10"
+            android:hint="发送评论"
+            android:inputType="text"
+            android:paddingLeft="8dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+            app:layout_constraintEnd_toStartOf="@+id/imageView8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

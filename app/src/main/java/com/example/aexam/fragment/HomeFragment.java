@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment {
     private int[] mImg;
     private List<ImageView> mImgList;
     private int previousSelectedPosition;
-    private boolean isRunning;
+    private boolean isRunning = true;
 
     @Nullable
     @Override
@@ -104,7 +104,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        isRunning = true;
+
 
         // 开启轮询
         new Thread() {
@@ -149,8 +149,8 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onDetach() {
+        super.onDetach();
         isRunning = false;
     }
 }

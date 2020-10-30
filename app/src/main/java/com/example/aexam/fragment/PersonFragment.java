@@ -13,7 +13,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.aexam.R;
+import com.example.aexam.activity.FeedBackActivity;
+import com.example.aexam.activity.OrderListActivity;
 import com.example.aexam.activity.PersonMsgActivity;
+import com.example.aexam.activity.PwdActivity;
 import com.example.aexam.adapter.PersonListAdapter;
 
 import java.util.ArrayList;
@@ -52,16 +55,21 @@ public class PersonFragment extends Fragment {
                         break;
                     case PERSON_ORDER:
                         // 订单列表
+                        Intent intent1 = new Intent(getContext(), OrderListActivity.class);
+                        startActivity(intent1);
                         break;
                     case PERSON_PWD:
                         // 修改密码
+                        Intent intent2 = new Intent(getContext(), PwdActivity.class);
+                        startActivity(intent2);
                         break;
                     case PERSON_FEEDBACK:
                         // 意见反馈
+                        Intent intent3 = new Intent(getContext(), FeedBackActivity.class);
+                        startActivity(intent3);
                         break;
                     case PERSON_EXIT:
                         // 退出
-                        getActivity().finish();
                         break;
                 }
             }

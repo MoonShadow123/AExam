@@ -28,7 +28,7 @@ public class ZiFragment extends Fragment {
     private int[] mImg;
     private List<ImageView> mImgList;
     private int previousSelectedPosition;
-    private boolean isRunning;
+    private boolean isRunning = true;
     private ListView listView;
 
 
@@ -110,7 +110,6 @@ public class ZiFragment extends Fragment {
             }
         });
 
-        isRunning = true;
 
         // 开启轮询
         new Thread() {
@@ -131,5 +130,11 @@ public class ZiFragment extends Fragment {
                 }
             }
         }.start();
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        isRunning = false;
     }
 }
